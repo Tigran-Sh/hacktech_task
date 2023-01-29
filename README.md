@@ -34,7 +34,7 @@
 ### Built With
 
 * [Python 3.10.9](https://www.python.org/)
-* [PostgreSQL 12.9](https://www.postgresql.org/)
+* [PostgreSQL 14.6](https://www.postgresql.org/)
 * [Django 4.1.5](https://www.djangoproject.com/)
 * [Django RF 3.14.0](https://www.django-rest-framework.org/)
 * [Simple JWT 5.2.2](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
@@ -56,37 +56,45 @@ For running project, you should install on your machine`
 _Here's instruction for installing and setting up the app step by step._
 
 1. Clone the repo`
-   shell
-   https://github.com/Tigran-Sh/hacktech_task
+   ```sh
+    git clone https://github.com/Tigran-Sh/hacktech_task
+    ```
 
 
 2. Move to the working directory, install and activate your virtualenv`
    shell
    cd /project_path
 
-   shell
-   python -m venv yourVenvName
+   ```sh
+    python -m venv yourVenvName
+    ```
 
-   shell
-   source yourVenvName/bin/activate
-
+    ```shell
+    source yourVenvName/bin/activate
+    ```
 
 3. Install requirements`
-   shell
-   pip install -r requirements.txt
+   ```shell
+    pip install -r requirements.txt
+    ```
+   
 
 
 4. Set your .env file and migrate`
-   shell
+   ```shell
    python manage.py migrate
+   ```
 
 
-5. Create superuser` shell
-    python manage.py createsuperuser
+5. Create superuser`
+   ```shell
+   python manage.py createsuperuser
+   ```
 
 
 6. Run celery`
-   shell
+   ```shell
    celery -A hacktech worker --beat
+   ```
 
 <p align="center"><a href="#top">Back to top</a></p>
